@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fu5-18-42Y">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +15,7 @@
             <objects>
                 <collectionViewController title="InstaKilo" id="7Kw-R2-H1E" customClass="InstaKiloViewController" customModule="InstaKiloSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="cdF-He-vjD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RGb-Yf-3WI">
@@ -25,7 +26,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InstaKiloCell" id="n7c-dE-bvH" customClass="InstaKiloViewCell" customModule="InstaKiloSwift" customModuleProvider="target">
-                                <rect key="frame" x="15.5" y="50" width="344" height="266"/>
+                                <rect key="frame" x="35" y="50" width="344" height="266"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="344" height="266"/>
@@ -56,15 +57,16 @@
                                     <outlet property="imageView" destination="uZ5-34-qMq" id="kx6-ed-faK"/>
                                     <outlet property="locationLabel" destination="gVP-HK-p1s" id="EaF-Su-Cec"/>
                                     <outlet property="subjectLabel" destination="wDY-GX-ebe" id="AzY-p8-qqJ"/>
+                                    <segue destination="K7w-rD-4tl" kind="show" identifier="segueDetailView" id="WVQ-mT-6xf"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderCell" id="KmP-wf-be7" customClass="SectionHeader" customModule="InstaKiloSwift" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="HeaderCell" id="KmP-wf-be7" customClass="SectionHeader" customModule="InstaKiloSwift" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTP-34-nXv">
-                                    <rect key="frame" x="128" y="15" width="119" height="21"/>
+                                    <rect key="frame" x="147.66666666666666" y="15" width="118.99999999999997" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -87,7 +89,7 @@
                     <navigationItem key="navigationItem" id="dzU-3u-g3K">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="XXA-Li-6Gr">
-                            <rect key="frame" x="121" y="6.5" width="133" height="31"/>
+                            <rect key="frame" x="140.66666666666666" y="6.6666666666666679" width="132.99999999999997" height="31.000000000000004"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Subject"/>
@@ -107,13 +109,40 @@
             </objects>
             <point key="canvasLocation" x="1752.8" y="121.88905547226388"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="r3h-0Z-CxP">
+            <objects>
+                <viewController id="K7w-rD-4tl" customClass="DetailViewController" customModule="InstaKiloSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wtw-lc-nuj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3GX-X2-TKK">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="dPh-9K-j0Z"/>
+                                    <constraint firstAttribute="height" constant="672" id="rMA-gv-hI3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2Lx-T7-lZI"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="3GX-X2-TKK" id="7xD-it-dKf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Zm-Dq-yrD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2534.7826086956525" y="123.91304347826087"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="kds-7v-0aS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fu5-18-42Y" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fSo-Mn-S2K">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
