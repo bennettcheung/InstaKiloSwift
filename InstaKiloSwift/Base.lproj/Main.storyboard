@@ -19,13 +19,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RGb-Yf-3WI">
                             <size key="itemSize" width="344" height="266"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InstaKiloCell" id="n7c-dE-bvH" customClass="InstaKiloViewCell" customModule="InstaKiloSwift" customModuleProvider="target">
-                                <rect key="frame" x="15.5" y="0.0" width="344" height="266"/>
+                                <rect key="frame" x="15.5" y="50" width="344" height="266"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="344" height="266"/>
@@ -59,6 +59,26 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderCell" id="KmP-wf-be7" customClass="SectionHeader" customModule="InstaKiloSwift" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTP-34-nXv">
+                                    <rect key="frame" x="128" y="15" width="119" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="lTP-34-nXv" firstAttribute="centerX" secondItem="KmP-wf-be7" secondAttribute="centerX" id="XFy-hA-BrV"/>
+                                <constraint firstItem="lTP-34-nXv" firstAttribute="centerY" secondItem="KmP-wf-be7" secondAttribute="centerY" id="e6e-E8-tKp"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="headerLabel" destination="lTP-34-nXv" id="GXs-Bh-ObM"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="7Kw-R2-H1E" id="a62-nH-44H"/>
                             <outlet property="delegate" destination="7Kw-R2-H1E" id="PuG-OB-RT2"/>
@@ -73,11 +93,14 @@
                                 <segment title="Subject"/>
                                 <segment title="Location"/>
                             </segments>
+                            <connections>
+                                <action selector="categoryChanged:" destination="7Kw-R2-H1E" eventType="valueChanged" id="t1V-44-ei2"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
+                        <outlet property="categorySegmentedControl" destination="XXA-Li-6Gr" id="2aN-Kv-Hbt"/>
                         <outlet property="collectionView" destination="cdF-He-vjD" id="2kK-OT-fUa"/>
-                        <outlet property="imageCollectionView" destination="cdF-He-vjD" id="t0t-kn-Og4"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8HJ-KE-vwN" userLabel="First Responder" sceneMemberID="firstResponder"/>

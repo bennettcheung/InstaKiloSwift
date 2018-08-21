@@ -16,6 +16,7 @@
 		91E6B43F212B7418002D8B11 /* InstaKiloViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E6B43E212B7418002D8B11 /* InstaKiloViewCell.swift */; };
 		91E6B441212B7511002D8B11 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E6B440212B7511002D8B11 /* Photo.swift */; };
 		91E6B443212B7925002D8B11 /* InstaKiloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E6B442212B7925002D8B11 /* InstaKiloViewController.swift */; };
+		91E6B447212B98CF002D8B11 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E6B446212B98CF002D8B11 /* SectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		91E6B43E212B7418002D8B11 /* InstaKiloViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaKiloViewCell.swift; sourceTree = "<group>"; };
 		91E6B440212B7511002D8B11 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		91E6B442212B7925002D8B11 /* InstaKiloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaKiloViewController.swift; sourceTree = "<group>"; };
+		91E6B446212B98CF002D8B11 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				91E6B410212B7167002D8B11 /* AppDelegate.swift */,
 				91E6B414212B7167002D8B11 /* Main.storyboard */,
+				91E6B446212B98CF002D8B11 /* SectionHeader.swift */,
 				91E6B440212B7511002D8B11 /* Photo.swift */,
 				91E6B43E212B7418002D8B11 /* InstaKiloViewCell.swift */,
 				91E6B442212B7925002D8B11 /* InstaKiloViewController.swift */,
@@ -264,6 +267,7 @@
 			files = (
 				91E6B441212B7511002D8B11 /* Photo.swift in Sources */,
 				91E6B443212B7925002D8B11 /* InstaKiloViewController.swift in Sources */,
+				91E6B447212B98CF002D8B11 /* SectionHeader.swift in Sources */,
 				91E6B411212B7167002D8B11 /* AppDelegate.swift in Sources */,
 				91E6B43F212B7418002D8B11 /* InstaKiloViewCell.swift in Sources */,
 			);
