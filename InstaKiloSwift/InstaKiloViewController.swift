@@ -91,6 +91,11 @@ class InstaKiloViewController: UICollectionViewController {
     }
     return UICollectionReusableView()
   }
+  
+  override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+    photoArray[indexPath.section].remove(at: indexPath.item)
+    self.collectionView?.deleteItems(at: [indexPath])
+  }
 
   
   func setupDataBySubject(){
